@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planet | Metropolis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=EB+Garamond:wght@400;600&display=swap');
+        
+        body {
+            font-family: 'EB Garamond', Georgia, serif;
+            background: #e8e4d8;
+        }
+        .headline {
+            font-family: 'Playfair Display', serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+
+@media (max-width: 768px) {
+
+    body{
+        background:#fffef7;
+    }
+
+    .newspaper{
+        width:100%;
+        border:none;
+    }
+
+
+    header{
+        padding:18px 15px;
+    }
+
+    header img{
+        width:48px;
+        height:48px;
+    }
+
+    header h1{
+        font-size:2rem !important;
+        line-height:1;
+        text-align:center;
+    }
+
+    header p{
+        text-align:center;
+    }
+
+
+    .border-b .flex{
+        justify-content:center;
+        gap:14px;
+        font-size:.72rem;
+    }
+
+
+    .carousel-slide img{
+        height:240px;
+    }
+
+    .carousel-slide .absolute.bottom-8{
+        left:18px;
+        right:18px;
+        bottom:18px;
+    }
+
+    .carousel-slide h2{
+        font-size:1.6rem !important;
+        line-height:1.15;
+    }
+
+    .carousel-slide p{
+        font-size:.9rem;
+    }
+
+    .carousel-slide a{
+        padding:10px 18px;
+        font-size:.85rem;
+    }
+
+    #prev-btn,
+    #next-btn{
+        padding:10px;
+    }
+
+
+    .px-6{
+        padding-left:18px !important;
+        padding-right:18px !important;
+    }
+
+    .headline{
+        font-size:2.2rem !important;
+        line-height:1.15;
+        text-align:center;
+    }
+
+    .prose{
+        font-size:1.08rem;
+    }
+
+    .prose h2{
+        font-size:1.8rem;
+        text-align:left;
+    }
+
+    .prose p{
+        text-align:justify;
+    }
+
+    .prose blockquote,
+    .prose .bg-gray-100{
+        padding:20px;
+        font-size:1.1rem;
+    }
+
+
+    .grid{
+        gap:22px;
+    }
+
+    .card-hover img{
+        height:210px;
+    }
+
+    .card-hover h3{
+        font-size:1.25rem;
+    }
+
+
+    footer{
+        padding:35px 20px;
+        text-align:center;
+    }
+}
+    </style>
+</head>
+<body class="bg-[#e8e4d8]">
+
+<div class="max-w-7xl mx-auto newspaper border-x border-black bg-[#fffef7] min-h-screen">
+
+    <!-- Masthead -->
+    <header class="bg-black text-white px-6 py-5">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-4">
+                <img src="https://via.placeholder.com/70" alt="Logo" class="w-14 h-14">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-black tracking-tighter headline">DAILY PLANET</h1>
+                    <p class="text-xs tracking-widest text-gray-400">METROPOLIS • EST. 1885</p>
+                </div>
+            </div>
+            <div class="text-center md:text-right">
+                <div class="text-sm">Thursday, July 16, 2026</div>
+                <div class="text-amber-400 text-lg font-medium">DIGITAL EDITION</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <div class="px-6 py-5 border-b border-gray-300 bg-white">
+        <div class="flex flex-wrap gap-6 justify-center md:justify-start text-sm uppercase font-medium">
+            <a href="#" class="hover:text-red-700 transition">Home</a>
+            <a href="heroes.html" class="hover:text-red-700 transition">Heroes</a>
+            <a href="news.html" class="hover:text-red-700 transition">News</a>
+            <a href="lexcorp.html" class="hover:text-red-700 transition">LexCorp</a>
+            <a href="specials.html" class="hover:text-red-700 transition">Special Editions</a>
+        </div>
+    </div>
+
+    <!-- Carousel Banner (unchanged as requested) -->
+    <div class="carousel-container bg-black text-white">
+        <div id="carousel-track" class="carousel-track">
+            
+            <!-- Slide 1 -->
+            <div class="carousel-slide relative">
+                <img src="https://via.placeholder.com/1200x500?text=Krypto+Saving+the+City" 
+                     class="w-full h-80 md:h-96 object-cover opacity-90">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute bottom-8 left-8 right-8">
+                    <span class="bg-red-600 px-4 py-1 text-xs font-bold">BREAKING</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-3 leading-tight">
+                        Krypto is the coolest hero in the universe
+                    </h2>
+                    <p class="mt-2 text-red-300">Lex Luthor takes yet another humiliating defeat</p>
+                    <a href="krypto.html" class="inline-block mt-5 bg-white text-black px-6 py-3 font-bold hover:bg-red-600 hover:text-white transition">
+                        READ NOW →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide relative">
+                <img src="https://via.placeholder.com/1200x500?text=Superman+in+Action" 
+                     class="w-full h-80 md:h-96 object-cover opacity-90">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute bottom-8 left-8 right-8">
+                    <span class="bg-red-600 px-4 py-1 text-xs font-bold">HEROES</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-3 leading-tight">
+                        Superman praises Krypto's performance
+                    </h2>
+                    <p class="mt-2 text-red-300">"He's better than many heroes with capes"</p>
+                    <a href="superman.html" class="inline-block mt-5 bg-white text-black px-6 py-3 font-bold hover:bg-red-600 hover:text-white transition">
+                        READ NOW →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div id="indicators" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2"></div>
+    </div>
+
+    <!-- Main Inspirational Article -->
+    <div class="px-6 py-10">
+        <div class="max-w-4xl mx-auto">
+            <span class="bg-red-700 text-white px-5 py-2 text-sm font-bold tracking-widest">FEATURED STORY</span>
+            
+            <h1 class="headline text-5xl md:text-6xl font-bold leading-tight mt-6 mb-8 text-center">
+                Being a Hero Isn't About Powers — It's About Making a Difference Every Day
+            </h1>
+
+            <div class="text-center text-gray-600 mb-12">
+                By Lois Lane • July 16, 2026
+            </div>
+
+            <div class="prose prose-lg max-w-none text-justify leading-relaxed space-y-8">
+                <p class="text-xl">
+                    In a world filled with extraordinary individuals who can fly, move mountains, and see through walls, 
+                    it's easy to believe that heroism belongs only to those with superhuman abilities. But the truth is far more powerful — 
+                    and far more accessible.
+                </p>
+
+                <p>
+                    True heroism isn't defined by the strength in your arms or the speed at which you can run. It's measured by the courage 
+                    in your heart when the odds seem impossible. It's the choice to stand up when others stay silent. It's showing up, day after day, 
+                    even when no one is watching and the results feel insignificant.
+                </p>
+
+                <h2 class="text-3xl font-semibold mt-12 mb-6">The Quiet Heroes Among Us</h2>
+                
+                <p>
+                    Every morning, thousands of ordinary people in Metropolis wake up and choose kindness over convenience. 
+                    Teachers who stay late to help struggling students. Doctors and nurses working double shifts during crises. 
+                    Neighbors checking on the elderly. Young volunteers cleaning up our parks and rivers. These are the real heroes — 
+                    the ones who don't wear capes but leave the world better than they found it.
+                </p>
+
+                <p>
+                    We often romanticize grand gestures and viral moments of bravery. But real change happens in the small, consistent acts. 
+                    The person who listens to someone who's struggling. The one who mentors a young dreamer. The citizen who refuses to look away 
+                    from injustice, even when it's uncomfortable.
+                </p>
+
+                <div class="bg-gray-100 border-l-4 border-red-700 p-8 my-12 italic text-xl">
+                    "Being a hero means doing what's right, especially when it's hard. Especially when it seems impossible. 
+                    Especially when no one will ever know you did it."
+                </div>
+
+                <h2 class="text-3xl font-semibold mt-12 mb-6">The Power of Persistence</h2>
+                
+                <p>
+                    History has shown us time and time again that the greatest transformations didn't come from a single powerful strike, 
+                    but from the steady, persistent effort of people who refused to give up. 
+                    Every major social progress, every scientific breakthrough, and every community improvement started with someone 
+                    who decided to act — even when the path ahead looked impossible.
+                </p>
+
+                <p>
+                    You don't need heat vision to light up someone's darkness. You don't need super strength to carry someone's burdens. 
+                    Sometimes, a kind word, a helping hand, or simply showing up with integrity is the most heroic thing anyone can do.
+                </p>
+
+                <h2 class="text-3xl font-semibold mt-12 mb-6">Your Turn to Be Extraordinary</h2>
+                
+                <p>
+                    So today, we challenge you: don't wait for superpowers. Start where you are. 
+                    Be the person who makes a difference in small but meaningful ways. 
+                    Be kind when it's easier to be indifferent. Be brave when fear feels safer. 
+                    Be the change you wish to see in Metropolis — and in the world.
+                </p>
+
+                <p class="pt-8 border-t">
+                    Because at the end of the day, the real heroes aren't the ones who can leap tall buildings in a single bound. 
+                    They're the ones who keep showing up, keep caring, and keep believing that every small act of goodness adds up to something extraordinary.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest News Grid -->
+    <div class="px-6 pb-12">
+        <h2 class="text-3xl font-bold border-b border-red-700 pb-3 mb-8">Latest Stories</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="story1.html" class="card-hover group block bg-white border border-gray-200 overflow-hidden">
+                <img src="https://via.placeholder.com/600x340?text=Community+Heroes" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <span class="text-red-600 text-xs font-bold">COMMUNITY • JULY 15, 2026</span>
+                    <h3 class="text-xl font-semibold mt-2 leading-tight group-hover:text-red-700">How ordinary citizens are changing Metropolis one good deed at a time</h3>
+                </div>
+            </a>
+
+            <a href="story2.html" class="card-hover group block bg-white border border-gray-200 overflow-hidden">
+                <img src="https://via.placeholder.com/600x340?text=Hope+in+Action" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <span class="text-red-600 text-xs font-bold">INSPIRATION • JULY 14, 2026</span>
+                    <h3 class="text-xl font-semibold mt-2 leading-tight group-hover:text-red-700">The power of small actions in an overwhelming world</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-12 px-6 text-sm">
+        <div class="max-w-7xl mx-auto text-center">
+            © 2026 Daily Planet • Metropolis • All Rights Reserved
+        </div>
+    </footer>
+</div>
+
+<script>
+    // Carousel Script
+    let currentSlide = 0;
+    const track = document.getElementById('carousel-track');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicatorsContainer = document.getElementById('indicators');
+
+    function createIndicators() {
+        indicatorsContainer.innerHTML = '';
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.className = `w-3 h-3 rounded-full cursor-pointer transition ${index === 0 ? 'bg-white' : 'bg-white/40'}`;
+            dot.onclick = () => goToSlide(index);
+            indicatorsContainer.appendChild(dot);
+        });
+    }
+
+    function updateIndicators() {
+        const dots = indicatorsContainer.children;
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].classList.toggle('bg-white', i === currentSlide);
+            dots[i].classList.toggle('bg-white/40', i !== currentSlide);
+        }
+    }
+
+    function goToSlide(n) {
+        currentSlide = n;
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updateIndicators();
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        goToSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        goToSlide(currentSlide);
+    }
+
+    let autoSlide = setInterval(nextSlide, 5000);
+
+    document.getElementById('next-btn').addEventListener('click', () => {
+        clearInterval(autoSlide);
+        nextSlide();
+        autoSlide = setInterval(nextSlide, 5000);
+    });
+
+    document.getElementById('prev-btn').addEventListener('click', () => {
+        clearInterval(autoSlide);
+        prevSlide();
+        autoSlide = setInterval(nextSlide, 5000);
+    });
+
+    createIndicators();
+</script>
+</body>
+</html>
+
+		
