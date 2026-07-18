@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planet - AI System to Predict Disasters</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=EB+Garamond:wght@400;600&display=swap');
+        
+        body {
+            font-family: 'EB Garamond', Georgia, serif;
+            background: #e8e4d8;
+            margin: 0;
+            padding: 0;
+        }
+        .headline {
+            font-family: 'Playfair Display', serif;
+        }
+        .article-content {
+            font-size: 1.18rem;
+            line-height: 1.85;
+        }
+        .article-content p {
+            margin-bottom: 1.35em;
+        }
+        .article-content h2 {
+            font-family: 'Playfair Display', serif;
+            margin-top: 2.5em;
+            margin-bottom: 1em;
+        }
+      @media (max-width: 768px) {
+
+    body{
+        background:#fffef7;
+    }
+
+    .newspaper{
+        width:100%;
+        border:none;
+    }
+
+
+    header{
+        padding:18px 15px;
+    }
+
+    header img{
+        width:48px;
+        height:48px;
+    }
+
+    header h1{
+        font-size:2rem !important;
+        line-height:1;
+        text-align:center;
+    }
+
+    header p{
+        text-align:center;
+    }
+
+
+    .border-b .flex{
+        justify-content:center;
+        gap:14px;
+        font-size:.72rem;
+    }
+
+
+    .carousel-slide img{
+        height:240px;
+    }
+
+    .carousel-slide .absolute.bottom-8{
+        left:18px;
+        right:18px;
+        bottom:18px;
+    }
+
+    .carousel-slide h2{
+        font-size:1.6rem !important;
+        line-height:1.15;
+    }
+
+    .carousel-slide p{
+        font-size:.9rem;
+    }
+
+    .carousel-slide a{
+        padding:10px 18px;
+        font-size:.85rem;
+    }
+
+    #prev-btn,
+    #next-btn{
+        padding:10px;
+    }
+
+
+    .px-6{
+        padding-left:18px !important;
+        padding-right:18px !important;
+    }
+
+    .headline{
+        font-size:2.2rem !important;
+        line-height:1.15;
+        text-align:center;
+    }
+
+    .prose{
+        font-size:1.08rem;
+    }
+
+    .prose h2{
+        font-size:1.8rem;
+        text-align:left;
+    }
+
+    .prose p{
+        text-align:justify;
+    }
+
+    .prose blockquote,
+    .prose .bg-gray-100{
+        padding:20px;
+        font-size:1.1rem;
+    }
+
+
+    .grid{
+        gap:22px;
+    }
+
+    .card-hover img{
+        height:210px;
+    }
+
+    .card-hover h3{
+        font-size:1.25rem;
+    }
+
+
+    footer{
+        padding:35px 20px;
+        text-align:center;
+    }
+      }
+    </style>
+</head>
+<body>
+
+<div class="bg-[#fffef7] min-h-screen flex flex-col">
+
+    <header class="bg-black text-white px-8 py-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-4">
+                    <img src="Logo.png" alt="Logo" class="w-14 h-14">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-black tracking-tighter headline">DAILY PLANET</h1>
+                        <p class="text-xs tracking-widest text-gray-400">METROPOLIS • EST. 1885</p>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <div class="text-sm">July 16, 2026</div>
+                    <div class="text-amber-400 text-lg font-medium tracking-wider">DIGITAL EDITION</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto w-full px-8 py-4 border-b">
+        <a href="news.html" class="inline-flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
+            ← Back to News
+        </a>
+    </div>
+
+    <article class="flex-1 max-w-5xl mx-auto w-full px-8 py-10">
+
+        <div class="flex items-center gap-4 text-sm text-gray-500 mb-6">
+            <span class="bg-red-100 text-red-700 px-5 py-1.5 rounded-full font-medium">TECHNOLOGY</span>
+            <span>July 16, 2026</span>
+        </div>
+
+        <h1 class="headline text-5xl md:text-6xl font-bold leading-tight mb-8">
+            New AI System to Help Predict and Prevent Natural Disasters in Metropolis
+        </h1>
+
+        <div class="flex items-center gap-4 mb-12">
+            <img src="Lois.jpg" 
+                 alt="Lois Lane" 
+                 class="w-14 h-14 rounded-full object-cover border-2 border-white shadow-md">
+            <div>
+                <p class="font-semibold text-lg">By Lois Lane</p>
+                <p class="text-gray-500">Daily Planet Senior Reporter</p>
+            </div>
+        </div>
+
+        <div class="mb-12">
+            <img src="Tech.jpg" 
+                 alt="AI technology in Metropolis" 
+                 class="w-full rounded-2xl shadow-2xl aspect-video object-cover">
+            <p class="text-center text-sm text-gray-500 mt-4">
+                Scientists and city officials unveil new artificial intelligence system for disaster prevention
+            </p>
+        </div>
+
+        <div class="article-content prose prose-lg max-w-none text-justify">
+            <p>
+                In a groundbreaking partnership between Metropolis University and the city government, a new artificial intelligence system has been developed to predict and help prevent natural disasters.
+            </p>
+            
+            <p>
+                The AI platform, named "Guardian", analyzes data from thousands of sensors across the city, weather patterns, geological activity, and historical records to forecast potential threats with remarkable accuracy.
+            </p>
+
+            <h2 class="text-3xl font-semibold">Saving Lives Through Technology</h2>
+            
+            <p>
+                During initial testing, the system successfully predicted a major storm that could have caused severe flooding. Thanks to early warnings, authorities were able to evacuate vulnerable areas and prepare emergency services, potentially saving dozens of lives and millions in property damage.
+            </p>
+
+            <p>
+                "This technology represents a new era in urban safety," said Dr. Marcus Chen, lead researcher on the project. "We are no longer just reacting to disasters — we are getting ahead of them."
+            </p>
+
+            <h2 class="text-3xl font-semibold">How It Works</h2>
+            
+            <p>
+                Guardian uses advanced machine learning algorithms to process real-time data from weather stations, river level monitors, seismic sensors, and even social media reports. The system can issue alerts from hours to days in advance, giving residents and emergency teams crucial time to prepare.
+            </p>
+
+            <p>
+                City officials plan to integrate the AI into the new public transportation system, allowing for automatic adjustments in service during potential emergencies.
+            </p>
+
+            <h2 class="text-3xl font-semibold">A Model for the Future</h2>
+            
+            <p>
+                Metropolis is quickly becoming a leader in smart city technology. Several other major cities have already expressed interest in adopting similar systems after seeing the promising results in early trials.
+            </p>
+
+            <p>
+                While the technology cannot prevent every disaster, it marks a significant step forward in protecting the millions of citizens who call Metropolis home.
+            </p>
+
+            <p class="mt-10 font-medium">
+                In a city that faces everything from earthquakes to powerful storms, having the right tools to stay one step ahead could make all the difference.
+            </p>
+        </div>
+
+        <div class="mt-16 flex gap-4 justify-center">
+            <button class="bg-black text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-red-700 transition">
+                <i class="fab fa-twitter"></i> Share on X
+            </button>
+            <button class="bg-black text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-red-700 transition">
+                <i class="fab fa-facebook"></i> Share on Facebook
+            </button>
+        </div>
+    </article>
+
+    <footer class="mt-auto bg-black text-gray-400 py-10 text-sm">
+        <div class="max-w-5xl mx-auto text-center px-8">
+            © 2026 Daily Planet • Metropolis • All Rights Reserved
+        </div>
+    </footer>
+
+</div>
+
+</body>
+  </html>
