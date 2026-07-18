@@ -30,6 +30,13 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
+        
+        .search-input {
+            transition: all 0.3s ease;
+        }
+        .search-input:focus {
+            box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.2);
+        }
 		@media (max-width: 768px) {
 
     body{
@@ -188,10 +195,21 @@
         </p>
     </div>
 
-    <div class="px-6 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="px-6 py-6 bg-white border-b border-gray-200">
+        <div class="max-w-2xl mx-auto">
+            <div class="relative">
+                <input type="text" id="searchInput" 
+                       class="search-input w-full bg-gray-50 border border-gray-300 rounded-full py-4 pl-12 pr-6 text-lg focus:outline-none focus:border-red-700"
+                       placeholder="Search heroes... (e.g. superman, krypto)">
+                <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            </div>
+        </div>
+    </div>
 
-            <a href="Kryptonews.html" class="card-hover group block bg-white border border-gray-200 overflow-hidden news-card">
+    <div class="px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="heroes-grid">
+
+            <a href="Kryptonews.html" class="card-hover group block bg-white border border-gray-200 overflow-hidden hero-card">
                 <div class="relative">
                     <img src="Krypto.jpg" 
                          class="w-full h-56 object-cover transition-transform group-hover:scale-105">
@@ -212,6 +230,27 @@
                 </div>
             </a>
 
+            <a href="superman.html" class="card-hover group block bg-white border border-gray-200 overflow-hidden hero-card">
+                <div class="relative">
+                    <img src="Superman.jpg" 
+                         class="w-full h-56 object-cover transition-transform group-hover:scale-105">
+                    <span class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1">HEROES</span>
+                </div>
+                <div class="p-6">
+                    <div class="text-red-600 text-xs font-bold mb-2">JULY 17, 2026</div>
+                    <h3 class="text-xl font-semibold leading-tight mb-3 group-hover:text-red-700 transition">
+                        Superman: The Man Behind the Legend — Hope, Sacrifice, and the Weight of Being a Hero
+                    </h3>
+                    <p class="text-gray-600 line-clamp-3">
+                        In a world that often feels uncertain, Superman continues to stand as a beacon of hope. Discover the man behind the legend.
+                    </p>
+                    <div class="mt-6 flex items-center text-xs text-gray-500">
+                        <i class="fas fa-clock mr-1"></i>
+                        12 min read
+                    </div>
+                </div>
+            </a>
+
         </div>
     </div>
 
@@ -223,5 +262,24 @@
 
 </div>
 
+<script>
+    const searchInput = document.getElementById('searchInput');
+
+    function filterHeroes() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const cards = document.querySelectorAll('.hero-card');
+
+        cards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const description = card.querySelector('p').textContent.toLowerCase();
+            
+            card.style.display = (searchTerm === '' || 
+                                title.includes(searchTerm) || 
+                                description.includes(searchTerm)) ? 'block' : 'none';
+        });
+    }
+
+    searchInput.addEventListener('input', filterHeroes);
+</script>
 </body>
 </html>
