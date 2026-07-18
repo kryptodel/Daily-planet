@@ -159,7 +159,6 @@
 
 <div class="max-w-7xl mx-auto newspaper border-x border-black bg-[#fffef7] min-h-screen">
 
-    <!-- Masthead -->
     <header class="bg-black text-white px-6 py-5">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-4">
@@ -176,7 +175,6 @@
         </div>
     </header>
 
-    <!-- Navigation -->
     <div class="px-6 py-5 border-b border-gray-300 bg-white">
         <div class="flex flex-wrap gap-6 justify-center md:justify-start text-sm uppercase font-medium">
             <a href="index.html" class="text-red-700 font-bold">Home</a>
@@ -188,11 +186,9 @@
         </div>
     </div>
 
-    <!-- Carousel Banner (unchanged as requested) -->
     <div class="carousel-container bg-black text-white">
         <div id="carousel-track" class="carousel-track">
-            
-            <!-- Slide 1 -->
+
             <div class="carousel-slide relative">
                 <img src="Krypto2.jpg" 
                      class="w-full h-80 md:h-96 object-cover opacity-90">
@@ -209,7 +205,6 @@
                 </div>
             </div>
 
-            <!-- Slide 2 -->
             <div class="carousel-slide relative">
                 <img src="Superman2.png" 
                      class="w-full h-80 md:h-96 object-cover opacity-90">
@@ -217,9 +212,10 @@
                 <div class="absolute bottom-8 left-8 right-8">
                     <span class="bg-red-600 px-4 py-1 text-xs font-bold">HEROES</span>
                     <h2 class="text-3xl md:text-4xl font-bold mt-3 leading-tight">
-                        Superman praises Krypto's performance
+                     Superman: The Man Behind the Legend 
+
                     </h2>
-                    <p class="mt-2 text-red-300">"He's better than many heroes with capes"</p>
+                    <p class="mt-2 text-red-300">"Hope, Sacrifice, and the Weight of Being a Hero"</p>
                     <a href="superman.html" class="inline-block mt-5 bg-white text-black px-6 py-3 font-bold hover:bg-red-600 hover:text-white transition">
                         READ NOW →
                     </a>
@@ -238,7 +234,6 @@
         <div id="indicators" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2"></div>
     </div>
 
-    <!-- Main Inspirational Article -->
     <div class="px-6 py-10">
         <div class="max-w-4xl mx-auto">
             <span class="bg-red-700 text-white px-5 py-2 text-sm font-bold tracking-widest">FEATURED STORY</span>
@@ -315,7 +310,6 @@
         </div>
     </div>
 
-    <!-- Latest News Grid -->
     <div class="px-6 pb-12">
         <h2 class="text-3xl font-bold border-b border-red-700 pb-3 mb-8">Latest Stories</h2>
         
@@ -338,7 +332,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="bg-black text-gray-400 py-12 px-6 text-sm">
         <div class="max-w-7xl mx-auto text-center">
             © 2026 Daily Planet • Metropolis • All Rights Reserved
@@ -347,7 +340,7 @@
 </div>
 
 <script>
-    // Carousel Script
+
     let currentSlide = 0;
     const track = document.getElementById('carousel-track');
     const slides = document.querySelectorAll('.carousel-slide');
