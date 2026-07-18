@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planet - Superman: The Man Behind the Legend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=EB+Garamond:wght@400;600&display=swap');
+        
+        body {
+            font-family: 'EB Garamond', Georgia, serif;
+            background: #e8e4d8;
+            margin: 0;
+            padding: 0;
+        }
+        .headline {
+            font-family: 'Playfair Display', serif;
+        }
+        .article-content {
+            font-size: 1.18rem;
+            line-height: 1.85;
+        }
+        .article-content p {
+            margin-bottom: 1.35em;
+        }
+        .article-content h2 {
+            font-family: 'Playfair Display', serif;
+            margin-top: 2.5em;
+            margin-bottom: 1em;
+        }
+      @media (max-width: 768px) {
+
+    body{
+        background:#fffef7;
+    }
+
+    .newspaper{
+        width:100%;
+        border:none;
+    }
+
+
+    header{
+        padding:18px 15px;
+    }
+
+    header img{
+        width:48px;
+        height:48px;
+    }
+
+    header h1{
+        font-size:2rem !important;
+        line-height:1;
+        text-align:center;
+    }
+
+    header p{
+        text-align:center;
+    }
+
+
+    .border-b .flex{
+        justify-content:center;
+        gap:14px;
+        font-size:.72rem;
+    }
+
+
+    .carousel-slide img{
+        height:240px;
+    }
+
+    .carousel-slide .absolute.bottom-8{
+        left:18px;
+        right:18px;
+        bottom:18px;
+    }
+
+    .carousel-slide h2{
+        font-size:1.6rem !important;
+        line-height:1.15;
+    }
+
+    .carousel-slide p{
+        font-size:.9rem;
+    }
+
+    .carousel-slide a{
+        padding:10px 18px;
+        font-size:.85rem;
+    }
+
+    #prev-btn,
+    #next-btn{
+        padding:10px;
+    }
+
+
+    .px-6{
+        padding-left:18px !important;
+        padding-right:18px !important;
+    }
+
+    .headline{
+        font-size:2.2rem !important;
+        line-height:1.15;
+        text-align:center;
+    }
+
+    .prose{
+        font-size:1.08rem;
+    }
+
+    .prose h2{
+        font-size:1.8rem;
+        text-align:left;
+    }
+
+    .prose p{
+        text-align:justify;
+    }
+
+    .prose blockquote,
+    .prose .bg-gray-100{
+        padding:20px;
+        font-size:1.1rem;
+    }
+
+
+    .grid{
+        gap:22px;
+    }
+
+    .card-hover img{
+        height:210px;
+    }
+
+    .card-hover h3{
+        font-size:1.25rem;
+    }
+
+
+    footer{
+        padding:35px 20px;
+        text-align:center;
+    }
+      }
+    </style>
+</head>
+<body>
+
+<div class="bg-[#fffef7] min-h-screen flex flex-col">
+
+    <header class="bg-black text-white px-8 py-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-4">
+                    <img src="Logo.png" alt="Logo" class="w-14 h-14">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-black tracking-tighter headline">DAILY PLANET</h1>
+                        <p class="text-xs tracking-widest text-gray-400">METROPOLIS • EST. 1885</p>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <div class="text-sm">July 17, 2026</div>
+                    <div class="text-amber-400 text-lg font-medium tracking-wider">DIGITAL EDITION</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto w-full px-8 py-4 border-b">
+        <a href="news.html" class="inline-flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
+            ← Back to News
+        </a>
+    </div>
+
+    <article class="flex-1 max-w-5xl mx-auto w-full px-8 py-10">
+
+        <div class="flex items-center gap-4 text-sm text-gray-500 mb-6">
+            <span class="bg-red-100 text-red-700 px-5 py-1.5 rounded-full font-medium">HEROES</span>
+            <span>July 17, 2026</span>
+        </div>
+
+        <h1 class="headline text-5xl md:text-6xl font-bold leading-tight mb-8">
+            Superman: The Man Behind the Legend — Hope, Sacrifice, and the Weight of Being a Hero
+        </h1>
+
+        <div class="flex items-center gap-4 mb-12">
+            <img src="Lois.jpg" 
+                 alt="Lois Lane" 
+                 class="w-14 h-14 rounded-full object-cover border-2 border-white shadow-md">
+            <div>
+                <p class="font-semibold text-lg">By Lois Lane</p>
+                <p class="text-gray-500">Daily Planet Senior Reporter</p>
+            </div>
+        </div>
+
+        <div class="mb-12">
+            <img src="superman.jpg" 
+                 alt="Superman flying over Metropolis" 
+                 class="w-full rounded-2xl shadow-2xl aspect-video object-cover">
+            <p class="text-center text-sm text-gray-500 mt-4">
+                Superman patrolling the skies of Metropolis, a symbol of hope for millions
+            </p>
+        </div>
+
+        <div class="article-content prose prose-lg max-w-none text-justify">
+            <p>
+                In a world that often feels divided and uncertain, one figure continues to stand as a beacon of hope. 
+                Not a politician, not a billionaire, not even a god — but a man from Smallville who chose to use his extraordinary gifts to protect ordinary people.
+            </p>
+            
+            <p>
+                For over a decade, Superman has been Metropolis’s greatest defender. From stopping natural disasters to thwarting criminal empires, his presence has become synonymous with safety and inspiration. 
+                But behind the iconic “S” shield lies a man who carries an immense burden — the weight of being the world’s symbol of hope.
+            </p>
+
+            <h2 class="text-3xl font-semibold">A Hero’s Daily Sacrifice</h2>
+            
+            <p>
+                Those who know him best say that Superman’s greatest strength isn’t his ability to fly or move mountains — it’s his unwavering commitment to doing what’s right, even when no one is watching. 
+                He rarely takes credit for his actions, choosing instead to disappear into the clouds after saving the day.
+            </p>
+
+            <p>
+                “He doesn’t do this for glory,” said one Metropolis police officer who has worked alongside him. 
+                “He does it because he genuinely believes every life matters. That kind of integrity is rare, even among heroes.”
+            </p>
+
+            <blockquote class="border-l-4 border-red-700 pl-8 italic my-12 text-2xl">
+                "The real power isn't in the cape or the strength. It's in choosing to stand up when it's easier to look away. 
+                That's what makes him Superman."
+            </blockquote>
+
+            <h2 class="text-3xl font-semibold">Recent Threats and Triumphs</h2>
+            
+            <p>
+                This past month has been particularly challenging. Multiple coordinated attacks by advanced technology — widely believed to be linked to LexCorp — have tested even Superman’s limits. 
+                From neutralizing a massive drone fleet over the city to preventing a catastrophic meltdown at a power plant on the outskirts, he has been working around the clock.
+            </p>
+
+            <p>
+                Citizens have reported seeing him helping with rescue efforts after a building collapse downtown, personally carrying survivors to safety. 
+                In one emotional moment captured by bystanders, Superman comforted a young girl who had lost her home, promising her that “Metropolis always rebuilds — together.”
+            </p>
+
+            <h2 class="text-3xl font-semibold">The Human Side of a Superhero</h2>
+            
+            <p>
+                Despite his godlike abilities, those close to him emphasize that Superman remains deeply human. He values simple things: quiet moments in the park, helping elderly neighbors, and protecting the city he has come to call home.
+            </p>
+
+            <p>
+                His relationship with the people of Metropolis has evolved from awe to something more personal. Children draw pictures of him, schools teach lessons about courage and kindness inspired by his example, and community leaders credit him with inspiring a new wave of volunteerism across the city.
+            </p>
+
+            <p>
+                Yet he continues to remind everyone that true heroism isn’t about powers — it’s about choices. In interviews and public appearances, he consistently deflects praise, urging citizens to be the heroes in their own lives.
+            </p>
+
+            <h2 class="text-3xl font-semibold">A Legacy That Transcends Time</h2>
+            
+            <p>
+                As threats to Metropolis continue to evolve, one thing remains constant: as long as Superman is here, hope is not lost. 
+                He represents the best of what humanity can aspire to — strength tempered with compassion, power used in service of others.
+            </p>
+
+            <p>
+                Whether he’s stopping a falling airplane or simply helping a child find their lost dog, Superman continues to prove that being a hero is not about being perfect. 
+                It’s about showing up when it matters most.
+            </p>
+
+            <p class="mt-10 font-medium">
+                In the words of the Man of Steel himself: “There’s a hero in all of us. We just need the courage to let it out.”
+            </p>
+        </div>
+
+        <div class="mt-16 flex gap-4 justify-center">
+            <button class="bg-black text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-red-700 transition">
+                <i class="fab fa-twitter"></i> Share on X
+            </button>
+            <button class="bg-black text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-red-700 transition">
+                <i class="fab fa-facebook"></i> Share on Facebook
+            </button>
+        </div>
+    </article>
+
+    <footer class="mt-auto bg-black text-gray-400 py-10 text-sm">
+        <div class="max-w-5xl mx-auto text-center px-8">
+            © 2026 Daily Planet • Metropolis • All Rights Reserved
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>
