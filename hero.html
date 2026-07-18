@@ -23,10 +23,6 @@
             flex-direction: column;
         }
         
-        .main-content {
-            flex: 1;
-        }
-        
         .headline {
             font-family: 'Playfair Display', serif;
         }
@@ -34,8 +30,7 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
-      
-@media (max-width: 768px) {
+		@media (max-width: 768px) {
 
     body{
         background:#fffef7;
@@ -152,14 +147,13 @@
         padding:35px 20px;
         text-align:center;
     }
-}
+		}
     </style>
 </head>
 <body>
 
 <div class="max-w-7xl mx-auto newspaper border-x border-black bg-[#fffef7] w-full">
 
-    <!-- Masthead -->
     <header class="bg-black text-white px-6 py-5">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-4">
@@ -176,7 +170,6 @@
         </div>
     </header>
 
-    <!-- Navigation -->
     <div class="px-6 py-5 border-b border-gray-300 bg-white">
         <div class="flex flex-wrap gap-6 justify-center md:justify-start text-sm uppercase font-medium">
             <a href="index.html" class="hover:text-red-700 transition">Home</a>
@@ -184,11 +177,10 @@
             <a href="news.html" class="hover:text-red-700 transition">News</a>
             <a href="lexcorp.html" class="hover:text-red-700 transition">Villains</a>
             <a href="specials.html" class="hover:text-red-700 transition">Special Editions</a>
-			<a href="lexcorp.html" class="hover:text-red-700 transition">Wanted</a>
+            <a href="lexcorp.html" class="hover:text-red-700 transition">Wanted</a>
         </div>
     </div>
 
-    <!-- Page Header -->
     <div class="px-6 pt-10 pb-6 border-b border-gray-300">
         <h1 class="headline text-5xl md:text-6xl font-bold text-center">Heroes of Metropolis</h1>
         <p class="text-center text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
@@ -196,34 +188,33 @@
         </p>
     </div>
 
-    <!-- Main Content -->
-    <div class="main-content px-6 py-12">
+    <div class="px-6 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- Card 1 -->
-            <a href="Kryptonews.html" class="card-hover group block bg-white border border-gray-200 overflow-hidden rounded-xl">
-    <img src="Krypto.jpg" 
-         class="w-full h-64 object-cover">
-    <div class="p-6">
-        <div class="flex justify-between items-center text-xs text-gray-500 mb-3">
-            <span>HEROES</span>
-            <span>JULY 17, 2026</span>
-        </div>
-        <h3 class="text-2xl font-semibold leading-tight group-hover:text-red-700 transition">
-            Krypto Saves the Day Once Again — The Super Dog Who Needs No Cape
-        </h3>
-        <p class="text-gray-600 mt-4 line-clamp-3">
-            The loyal super dog single-handedly destroyed an entire LexCorp drone fleet in under a minute, proving once again why he's Metropolis' favorite hero.
-        </p>
-        <div class="mt-6 text-red-700 font-medium text-sm">READ FULL STORY →</div>
-    </div>
+            <a href="Kryptonews.html" class="card-hover group block bg-white border border-gray-200 overflow-hidden news-card">
+                <div class="relative">
+                    <img src="Krypto.jpg" 
+                         class="w-full h-56 object-cover transition-transform group-hover:scale-105">
+                    <span class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1">HEROES</span>
+                </div>
+                <div class="p-6">
+                    <div class="text-red-600 text-xs font-bold mb-2">JULY 17, 2026</div>
+                    <h3 class="text-xl font-semibold leading-tight mb-3 group-hover:text-red-700 transition">
+                        Krypto Saves the Day Once Again — The Super Dog Who Needs No Cape
+                    </h3>
+                    <p class="text-gray-600 line-clamp-3">
+                        The loyal super dog single-handedly destroyed an entire LexCorp drone fleet in under a minute, proving once again why he's Metropolis' favorite hero.
+                    </p>
+                    <div class="mt-6 flex items-center text-xs text-gray-500">
+                        <i class="fas fa-clock mr-1"></i>
+                        6 min read
+                    </div>
+                </div>
             </a>
 
-            
         </div>
     </div>
 
-    <!-- Sticky Footer -->
     <footer class="mt-auto bg-black text-gray-400 py-8 px-6 text-sm">
         <div class="max-w-7xl mx-auto text-center">
             © 2026 Daily Planet • Metropolis • All Rights Reserved
