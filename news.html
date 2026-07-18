@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | Daily Planet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=EB+Garamond:wght@400;600&display=swap');
+        
+        body {
+            font-family: 'EB Garamond', Georgia, serif;
+            background: #e8e4d8;
+        }
+        .headline {
+            font-family: 'Playfair Display', serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .category-btn {
+            transition: all 0.2s ease;
+        }
+        
+        .category-btn.active {
+            background-color: #b91c1c !important;
+            color: white !important;
+            border-color: #b91c1c !important;
+        }
+        
+        .search-input {
+            transition: all 0.3s ease;
+        }
+        .search-input:focus {
+            box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.2);
+        }
+      @media (max-width: 768px) {
+
+    body{
+        background:#fffef7;
+    }
+
+    .newspaper{
+        width:100%;
+        border:none;
+    }
+
+
+    header{
+        padding:18px 15px;
+    }
+
+    header img{
+        width:48px;
+        height:48px;
+    }
+
+    header h1{
+        font-size:2rem !important;
+        line-height:1;
+        text-align:center;
+    }
+
+    header p{
+        text-align:center;
+    }
+
+
+    .border-b .flex{
+        justify-content:center;
+        gap:14px;
+        font-size:.72rem;
+    }
+
+
+    .carousel-slide img{
+        height:240px;
+    }
+
+    .carousel-slide .absolute.bottom-8{
+        left:18px;
+        right:18px;
+        bottom:18px;
+    }
+
+    .carousel-slide h2{
+        font-size:1.6rem !important;
+        line-height:1.15;
+    }
+
+    .carousel-slide p{
+        font-size:.9rem;
+    }
+
+    .carousel-slide a{
+        padding:10px 18px;
+        font-size:.85rem;
+    }
+
+    #prev-btn,
+    #next-btn{
+        padding:10px;
+    }
+
+
+    .px-6{
+        padding-left:18px !important;
+        padding-right:18px !important;
+    }
+
+    .headline{
+        font-size:2.2rem !important;
+        line-height:1.15;
+        text-align:center;
+    }
+
+    .prose{
+        font-size:1.08rem;
+    }
+
+    .prose h2{
+        font-size:1.8rem;
+        text-align:left;
+    }
+
+    .prose p{
+        text-align:justify;
+    }
+
+    .prose blockquote,
+    .prose .bg-gray-100{
+        padding:20px;
+        font-size:1.1rem;
+    }
+
+
+    .grid{
+        gap:22px;
+    }
+
+    .card-hover img{
+        height:210px;
+    }
+
+    .card-hover h3{
+        font-size:1.25rem;
+    }
+
+
+    footer{
+        padding:35px 20px;
+        text-align:center;
+    }
+      }
+    </style>
+</head>
+<body class="bg-[#e8e4d8]">
+
+<div class="max-w-7xl mx-auto newspaper border-x border-black bg-[#fffef7] min-h-screen">
+
+    <header class="bg-black text-white px-6 py-5">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-4">
+                <img src="Logo.png" alt="Logo" class="w-14 h-14">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-black tracking-tighter headline">DAILY PLANET</h1>
+                    <p class="text-xs tracking-widest text-gray-400">METROPOLIS • EST. 1885</p>
+                </div>
+            </div>
+            <div class="text-center md:text-right">
+                <div class="text-sm">Thursday, July 16, 2026</div>
+                <div class="text-amber-400 text-lg font-medium">DIGITAL EDITION</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="px-6 py-5 border-b border-gray-300 bg-white">
+        <div class="flex flex-wrap gap-6 justify-center md:justify-start text-sm uppercase font-medium">
+            <a href="index.html" class="hover:text-red-700 transition">Home</a>
+            <a href="hero.html" class="hover:text-red-700 transition">Heroes</a>
+            <a href="news.html" class="text-red-700 font-bold">News</a>
+            <a href="lexcorp.html" class="hover:text-red-700 transition">Villains</a>
+            <a href="specials.html" class="hover:text-red-700 transition">Special Editions</a>
+            <a href="lexcorp.html" class="hover:text-red-700 transition">Wanted</a>
+        </div>
+    </div>
+
+    <div class="px-6 py-10 bg-white border-b border-gray-300">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="bg-red-700 text-white px-6 py-2 text-sm font-bold tracking-widest">NEWS</span>
+            <h1 class="headline text-5xl md:text-6xl font-bold leading-tight mt-6">
+                Latest News
+            </h1>
+            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                Stay updated with everything happening in Metropolis and beyond.
+            </p>
+        </div>
+    </div>
+
+    <div class="px-6 py-6 bg-white border-b border-gray-200">
+        <div class="max-w-2xl mx-auto">
+            <div class="relative">
+                <input type="text" id="searchInput" 
+                       class="search-input w-full bg-gray-50 border border-gray-300 rounded-full py-4 pl-12 pr-6 text-lg focus:outline-none focus:border-red-700"
+                       placeholder="Search news... (e.g. superman, city, economy)">
+                <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-6 py-6 border-b border-gray-200 bg-white">
+        <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+            <button onclick="filterCategory('all')" class="category-btn active px-5 py-2 rounded-full text-sm font-medium border border-red-700 text-red-700" data-category="all">All</button>
+            <button onclick="filterCategory('city')" class="category-btn px-5 py-2 rounded-full text-sm font-medium border border-gray-300 hover:border-red-700 hover:text-red-700" data-category="city">City</button>
+            <button onclick="filterCategory('economy')" class="category-btn px-5 py-2 rounded-full text-sm font-medium border border-gray-300 hover:border-red-700 hover:text-red-700" data-category="economy">Economy</button>
+            <button onclick="filterCategory('crime')" class="category-btn px-5 py-2 rounded-full text-sm font-medium border border-gray-300 hover:border-red-700 hover:text-red-700" data-category="crime">Public Safety</button>
+            <button onclick="filterCategory('society')" class="category-btn px-5 py-2 rounded-full text-sm font-medium border border-gray-300 hover:border-red-700 hover:text-red-700" data-category="society">Society</button>
+            <button onclick="filterCategory('technology')" class="category-btn px-5 py-2 rounded-full text-sm font-medium border border-gray-300 hover:border-red-700 hover:text-red-700" data-category="technology">Technology</button>
+        </div>
+    </div>
+
+    <div class="px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="news-grid">
+
+            <a href="story1.html" class="card-hover group block bg-white border border-gray-200 overflow-hidden news-card" data-category="society">
+                <div class="relative">
+                    <img src="Metropolis.jpg" class="w-full h-56 object-cover transition-transform group-hover:scale-105">
+                    <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1">SOCIETY</span>
+                </div>
+                <div class="p-6">
+                    <div class="text-red-600 text-xs font-bold mb-2">JULY 15, 2026</div>
+                    <h3 class="text-xl font-semibold leading-tight mb-3 group-hover:text-red-700 transition">How ordinary citizens are changing Metropolis one good deed at a time</h3>
+                    <p class="text-gray-600 line-clamp-3">Community initiatives show that you don't need superpowers to make a real difference.</p>
+                    <div class="mt-6 flex items-center text-xs text-gray-500">
+                        <i class="fas fa-clock mr-1"></i>
+                        7 min read
+                    </div>
+                </div>
+            </a>
+
+            <a href="story2.html" class="card-hover group block bg-white border border-gray-200 overflow-hidden news-card" data-category="society">
+                <div class="relative">
+                    <img src="People.jpg" class="w-full h-56 object-cover transition-transform group-hover:scale-105">
+                    <span class="absolute top-4 left-4 bg-purple-600 text-white text-xs font-bold px-3 py-1">SOCIETY</span>
+                </div>
+                <div class="p-6">
+                    <div class="text-red-600 text-xs font-bold mb-2">JULY 14, 2026</div>
+                    <h3 class="text-xl font-semibold leading-tight mb-3 group-hover:text-red-700 transition">The power of small actions in an overwhelming world</h3>
+                    <p class="text-gray-600 line-clamp-3">How everyday gestures can create meaningful change even in difficult times.</p>
+                    <div class="mt-6 flex items-center text-xs text-gray-500">
+                        <i class="fas fa-clock mr-1"></i>
+                        6 min read
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="card-hover group block bg-white border border-gray-200 overflow-hidden news-card" data-category="city">
+                <div class="relative">
+                    <img src="Metropolis.jpg" class="w-full h-56 object-cover transition-transform group-hover:scale-105">
+                    <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1">CITY</span>
+                </div>
+                <div class="p-6">
+                    <div class="text-red-600 text-xs font-bold mb-2">JULY 16, 2026</div>
+                    <h3 class="text-xl font-semibold leading-tight mb-3 group-hover:text-red-700 transition">New public transportation plan aims to reduce traffic in downtown Metropolis</h3>
+                    <p class="text-gray-600 line-clamp-3">Mayor announces ambitious project to modernize the city's transit system.</p>
+                    <div class="mt-6 flex items-center text-xs text-gray-500">
+                        <i class="fas fa-clock mr-1"></i>
+                        5 min read
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="card-hover group block bg-white border border-gray-200 overflow-hidden news-card" data-category="economy">
+                <div class="relative">
+                    <img src="economy.jpg" class="w-full h-56 object-cover transition-transform group-hover:scale-105">
+                    <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1">ECONOMY</span>
+                </div>
+                <div class="p-6">
+                    <div class="text-red-600 text-xs font-bold mb-2">JULY 16, 2026</div>
+                    <h3 class="text-xl font-semibold leading-tight mb-3 group-hover:text-red-700 transition">LexCorp announces billions in renewable energy investments</h3>
+                    <p class="text-gray-600 line-clamp-3">The company promises to create thousands of new jobs in the metropolitan area.</p>
+                    <div class="mt-6 flex items-center text-xs text-gray-500">
+                        <i class="fas fa-clock mr-1"></i>
+                        8 min read
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="card-hover group block bg-white border border-gray-200 overflow-hidden news-card" data-category="crime">
+                <div class="relative">
+                    <img src="crime.jpg" class="w-full h-56 object-cover transition-transform group-hover:scale-105">
+                    <span class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1">SAFETY</span>
+                </div>
+                <div class="p-6">
+                    <div class="text-red-600 text-xs font-bold mb-2">JULY 15, 2026</div>
+                    <h3 class="text-xl font-semibold leading-tight mb-3 group-hover:text-red-700 transition">Crime rates drop 18% following joint police operation</h3>
+                    <p class="text-gray-600 line-clamp-3">Authorities attribute the success to better coordination between security forces.</p>
+                    <div class="mt-6 flex items-center text-xs text-gray-500">
+                        <i class="fas fa-clock mr-1"></i>
+                        6 min read
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="card-hover group block bg-white border border-gray-200 overflow-hidden news-card" data-category="technology">
+                <div class="relative">
+                    <img src="tech.jpg" class="w-full h-56 object-cover transition-transform group-hover:scale-105">
+                    <span class="absolute top-4 left-4 bg-indigo-600 text-white text-xs font-bold px-3 py-1">TECHNOLOGY</span>
+                </div>
+                <div class="p-6">
+                    <div class="text-red-600 text-xs font-bold mb-2">JULY 16, 2026</div>
+                    <h3 class="text-xl font-semibold leading-tight mb-3 group-hover:text-red-700 transition">New AI system to help predict and prevent natural disasters in Metropolis</h3>
+                    <p class="text-gray-600 line-clamp-3">Scientists and city officials partner on groundbreaking technology.</p>
+                    <div class="mt-6 flex items-center text-xs text-gray-500">
+                        <i class="fas fa-clock mr-1"></i>
+                        9 min read
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <footer class="bg-black text-gray-400 py-12 px-6 text-sm">
+        <div class="max-w-7xl mx-auto text-center">
+            © 2026 Daily Planet • Metropolis • All Rights Reserved
+        </div>
+    </footer>
+</div>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+
+    function filterCards() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const cards = document.querySelectorAll('.news-card');
+
+        cards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const description = card.querySelector('p').textContent.toLowerCase();
+            
+            if (searchTerm === '') {
+                card.style.display = 'block';
+            } else {
+                card.style.display = (title.includes(searchTerm) || description.includes(searchTerm)) 
+                    ? 'block' 
+                    : 'none';
+            }
+        });
+    }
+
+    searchInput.addEventListener('input', filterCards);
+
+    function filterCategory(selectedCategory) {
+        const cards = document.querySelectorAll('.news-card');
+        const buttons = document.querySelectorAll('.category-btn');
+
+        buttons.forEach(button => button.classList.remove('active'));
+        
+        const activeButton = Array.from(buttons).find(btn => 
+            btn.getAttribute('data-category') === selectedCategory
+        );
+        if (activeButton) activeButton.classList.add('active');
+
+        const searchTerm = searchInput.value.toLowerCase().trim();
+
+        cards.forEach(card => {
+            const matchesCategory = (selectedCategory === 'all') || 
+                                  (card.getAttribute('data-category') === selectedCategory);
+            
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const description = card.querySelector('p').textContent.toLowerCase();
+            const matchesSearch = searchTerm === '' || 
+                                title.includes(searchTerm) || 
+                                description.includes(searchTerm);
+
+            card.style.display = (matchesCategory && matchesSearch) ? 'block' : 'none';
+        });
+    }
+
+    window.onload = () => {
+        filterCategory('all');
+    };
+</script>
+</body>
+  </html>
