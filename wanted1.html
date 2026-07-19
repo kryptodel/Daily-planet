@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor "Razor" Kane | Most Wanted</title>
+    <title>Slade Wilson | Most Wanted</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -13,11 +13,17 @@
             font-family: 'EB Garamond', Georgia, serif;
             background: #111827;
             color: #e5e7eb;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         .headline {
             font-family: 'Playfair Display', serif;
         }
-      
+        .main-content {
+            flex: 1;
+        }
+                
 @media (max-width: 768px) {
 
     body{
@@ -136,17 +142,18 @@
         text-align:center;
     }
 }
+      
     </style>
 </head>
 <body>
 
-<div class="min-h-screen">
+<div class="flex-1 flex flex-col">
 
     <div class="bg-black py-4 text-center text-sm text-red-500 font-medium tracking-widest">
         METROPOLIS POLICE DEPARTMENT — ACTIVE WARRANT
     </div>
 
-    <div class="max-w-5xl mx-auto px-6 py-12">
+    <div class="main-content max-w-5xl mx-auto px-6 py-12">
 
         <a href="wanteds.html" class="inline-flex items-center gap-3 text-red-400 hover:text-red-300 mb-10">
             ← BACK TO MOST WANTED LIST
@@ -157,11 +164,11 @@
             <div class="md:col-span-2">
                 <div class="sticky top-8">
                     <div class="bg-white p-3">
-                        <img src="bandido1.jpg" alt="Victor Razor Kane" class="w-full aspect-square object-cover">
+                        <img src="Slade.jpg" alt="Deathstroke" class="w-full aspect-square object-cover">
                     </div>
                     <div class="mt-6 text-center">
                         <span class="inline-block bg-red-600 text-white text-sm font-bold px-10 py-3 tracking-widest">
-                            ARMED AND EXTREMELY DANGEROUS
+                            EXTREMELY DANGEROUS
                         </span>
                     </div>
                 </div>
@@ -170,8 +177,8 @@
             <div class="md:col-span-3 space-y-10">
 
                 <div>
-                    <h1 class="text-5xl font-bold text-white">VICTOR "RAZOR" KANE</h1>
-                    <p class="text-red-500 text-2xl mt-2">DOB: 03/12/1995 • Height: 6'1" • Weight: 195 lbs</p>
+                    <h1 class="text-5xl font-bold text-white">SLADE WILSON</h1>
+                    <p class="text-red-500 text-2xl mt-2">A.K.A. DEATHSTROKE • DOB: Unknown • Height: 6'4" • Weight: 225 lbs</p>
                 </div>
 
                 <div class="bg-zinc-900 border border-red-900 p-8">
@@ -187,38 +194,39 @@
                         <div>
                             <span class="block text-red-400 text-sm">CHARGES</span>
                             <ul class="list-disc pl-5 mt-2 space-y-1">
-                                <li>Aggravated Assault with Deadly Weapon</li>
-                                <li>Drug Trafficking (Class A Felony)</li>
-                                <li>Gang Leadership and Racketeering</li>
-                                <li>Multiple Counts of Witness Intimidation</li>
+                                <li>Multiple Counts of First-Degree Murder</li>
+                                <li>Terrorism and Assassination</li>
+                                <li>Mercenary Activities</li>
+                                <li>Conspiracy Against Heroes</li>
                             </ul>
                         </div>
 
                         <div>
                             <span class="block text-red-400 text-sm">KNOWN ASSOCIATES</span>
-                            <p class="mt-2">Members of the "Iron Blades" gang. Considered extremely loyal and violent.</p>
+                            <p class="mt-2">The Secret Society of Super Villains, H.I.V.E., and various criminal organizations.</p>
                         </div>
 
                         <div>
                             <span class="block text-red-400 text-sm">WARNING</span>
-                            <p class="mt-2 text-red-300">Kane is known to carry firearms and has a history of resisting arrest with extreme violence. Do not approach.</p>
+                            <p class="mt-2 text-red-300">Deathstroke is a highly trained mercenary with enhanced physical abilities, master tactician, and expert in weaponry. Do not approach under any circumstances.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-zinc-900 p-8 border border-red-900/50">
                     <h3 class="text-red-400 mb-4">LAST SEEN</h3>
-                    <p class="text-lg">Southside District, Metropolis — July 14, 2026</p>
-                    <p class="text-sm text-gray-400 mt-6">He may be using the alias "Vic Sharp". Often seen with a black leather jacket and a distinctive scar on his left cheek.</p>
+                    <p class="text-lg">Downtown Metropolis — July 16, 2026</p>
+                    <p class="text-sm text-gray-400 mt-6">Often seen wearing tactical armor with orange accents. May be carrying a sword and firearms.</p>
                 </div>
 
             </div>
         </div>
     </div>
 
-    <footer class="bg-black py-12 text-center text-gray-500 text-sm">
+    <footer class="mt-auto bg-black py-12 text-center text-gray-500 text-sm">
         METROPOLIS POLICE DEPARTMENT • CONFIDENTIAL • DO NOT APPROACH
     </footer>
+
 </div>
 
 </body>
