@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,17 @@
         body {
             font-family: 'EB Garamond', Georgia, serif;
             background: #e8e4d8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .newspaper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .main-content {
+            flex: 1;
         }
         .headline {
             font-family: 'Playfair Display', serif;
@@ -31,7 +42,7 @@
         .search-input:focus {
             box-shadow: 0 0 0 4px rgba(185, 28, 28, 0.2);
         }
-        
+                
 @media (max-width: 768px) {
 
     body{
@@ -153,9 +164,9 @@
       
     </style>
 </head>
-<body class="bg-[#e8e4d8]">
+<body>
 
-<div class="max-w-7xl mx-auto newspaper border-x border-black bg-[#fffef7] min-h-screen">
+<div class="max-w-7xl mx-auto newspaper border-x border-black bg-[#fffef7] w-full">
 
     <header class="bg-black text-white px-6 py-5">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -200,29 +211,29 @@
         </div>
     </div>
 
-    <div class="px-6 py-16">
+    <div class="main-content px-6 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="wanted-grid">
-
-            <a href="wanted1.html" class="wanted-card group block overflow-hidden wanted-item" data-name="victor razor kane">
+            <a href="deathstroke.html" class="wanted-card group block overflow-hidden wanted-item" data-name="deathstroke slade wilson">
                 <div class="relative">
-                    <img src="bandido1.jpg" class="w-full h-80 object-cover">
-                    <div class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-5 py-1">HIGH RISK</div>
+                    <img src="Slade.jpg" class="w-full h-80 object-cover">
+                    <div class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-5 py-1">EXTREMELY DANGEROUS</div>
                 </div>
                 <div class="p-8">
-                    <h3 class="text-3xl font-bold text-gray-900">VICTOR "RAZOR" KANE</h3>
-                    <p class="text-red-700 font-semibold mt-1">IF SEEN — CALL (555) 231-9876</p>
-                    <p class="mt-5 text-gray-600">Wanted for aggravated assault, drug trafficking and gang leadership.</p>
+                    <h3 class="text-3xl font-bold text-gray-900">SLADE WILSON</h3>
+                    <p class="text-red-700 font-semibold mt-1">A.K.A. DEATHSTROKE</p>
+                    <p class="mt-5 text-gray-600">Wanted for assassination, terrorism, mercenary activities, and multiple counts of murder.</p>
                 </div>
             </a>
 
         </div>
     </div>
 
-    <footer class="bg-black text-gray-400 py-12 px-6 text-sm">
+    <footer class="mt-auto bg-black text-gray-400 py-12 px-6 text-sm">
         <div class="max-w-7xl mx-auto text-center">
             © 2026 Daily Planet • Metropolis Police Department • All Rights Reserved
         </div>
     </footer>
+
 </div>
 
 <script>
