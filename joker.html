@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Planet - The Joker Strikes Again</title>
+    <title>The Joker | High Alert</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -13,11 +13,17 @@
             font-family: 'EB Garamond', Georgia, serif;
             background: #111827;
             color: #e5e7eb;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         .headline {
             font-family: 'Playfair Display', serif;
         }
-              
+        .main-content {
+            flex: 1;
+        }
+                      
 @media (max-width: 768px) {
 
     body{
@@ -136,94 +142,90 @@
         text-align:center;
     }
 }
-      
     </style>
 </head>
 <body>
 
-<div class="max-w-5xl mx-auto min-h-screen bg-zinc-950 flex flex-col">
+<div class="flex-1 flex flex-col">
 
     <div class="bg-red-700 py-3 text-center text-sm font-bold tracking-widest">
-        ACTIVE THREAT — THE JOKER
+        ACTIVE THREAT — EXTREME DANGER
     </div>
 
-    <header class="bg-black text-white px-8 py-8">
-        <div class="flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <img src="Logo.png" alt="Logo" class="w-12 h-12">
-                <div>
-                    <h1 class="text-4xl font-black tracking-tighter headline">DAILY PLANET</h1>
-                    <p class="text-red-400 text-sm">METROPOLIS • EST. 1885</p>
-                </div>
-            </div>
-            <div class="text-right">
-                <div class="text-red-400 text-xl font-medium">BREAKING NEWS</div>
-            </div>
-        </div>
-    </header>
+    <div class="main-content max-w-5xl mx-auto px-6 py-12">
 
-    <div class="flex-1 px-8 py-12">
-
-        <a href="villains.html" class="inline-flex items-center gap-2 text-red-400 hover:text-red-300 mb-8">
-            ← Back to Villains
+        <a href="villains.html" class="inline-flex items-center gap-3 text-red-400 hover:text-red-300 mb-10">
+            ← BACK TO VILLAINS DATABASE
         </a>
 
-        <div class="max-w-3xl mx-auto">
-            <div class="inline-block bg-red-600 text-white text-xs font-bold tracking-widest px-8 py-3 mb-8">
-                HIGH ALERT
+        <div class="grid md:grid-cols-5 gap-12">
+
+            <div class="md:col-span-2">
+                <div class="sticky top-8">
+                    <div class="bg-white p-3 shadow-2xl">
+                        <img src="joker.jpg" alt="The Joker" class="w-full aspect-square object-cover">
+                    </div>
+                    <div class="mt-6 text-center">
+                        <span class="inline-block bg-red-600 text-white text-sm font-bold px-10 py-3 tracking-widest">
+                            EXTREMELY DANGEROUS
+                        </span>
+                    </div>
+                </div>
             </div>
 
-            <h1 class="headline text-5xl md:text-6xl font-bold leading-tight mb-8">
-                The Joker Strikes Again — Chaos Erupts in Downtown Metropolis
-            </h1>
+            <div class="md:col-span-3 space-y-10">
 
-            <div class="flex justify-center gap-8 text-sm mb-12 text-gray-400">
-                <div>By Lois Lane</div>
-                <div>July 19, 2026</div>
-            </div>
+                <div>
+                    <h1 class="text-5xl font-bold text-white">THE JOKER</h1>
+                    <p class="text-red-500 text-2xl mt-2">REAL NAME: UNKNOWN • A.K.A. JACK NAPIER</p>
+                </div>
 
-            <div class="mb-12">
-                <img src="Joker2.jpg" alt="The Joker" class="w-full rounded-2xl shadow-2xl border border-red-900">
-                <p class="text-center text-sm text-gray-500 mt-4">The Joker laughing maniacally during his latest attack in Metropolis</p>
-            </div>
+                <div class="bg-zinc-900 border border-red-900 p-8">
+                    <h2 class="text-red-400 text-sm tracking-widest font-medium mb-4">URGENT ALERT</h2>
+                    <p class="text-3xl font-bold text-white">IF YOU SEE THIS MAN — DO NOT APPROACH</p>
+                    <p class="text-4xl text-red-500 font-mono mt-3">(555) 231-9876</p>
+                    <p class="text-sm text-gray-400 mt-6">Metropolis PD Emergency Line</p>
+                </div>
 
-            <div class="prose prose-lg max-w-none text-justify text-gray-300">
-                <p>
-                    Chaos returned to Metropolis today as the Clown Prince of Crime, The Joker, made a shocking appearance in the heart of the city. 
-                    Witnesses report that the villain unleashed a wave of laughing gas and explosive pranks, causing panic and multiple injuries.
-                </p>
-                
-                <p>
-                    Authorities are still trying to determine how The Joker managed to bypass security and enter Metropolis undetected. 
-                    This marks his third major attack in the region this year, showing a disturbing escalation in his campaign of terror.
-                </p>
+                <div>
+                    <h3 class="text-xl text-red-400 mb-5">CRIMINAL PROFILE</h3>
+                    <div class="space-y-6 text-gray-300">
+                        <div>
+                            <span class="block text-red-400 text-sm">KNOWN FOR</span>
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li>Terrorism and Mass Chaos</li>
+                                <li>Psychological Warfare</li>
+                                <li>Explosives and Laughing Gas Attacks</li>
+                                <li>Multiple Murders and Kidnappings</li>
+                            </ul>
+                        </div>
 
-                <h2 class="text-3xl font-semibold mt-12 mb-6 text-red-400">Why So Serious?</h2>
-                
-                <p>
-                    As always, The Joker left behind his signature calling card — a purple playing card with a sinister grin. 
-                    Attached was a note that simply read: "Let's put a smile on that face, Metropolis!"
-                </p>
+                        <div>
+                            <span class="block text-red-400 text-sm">WARNING</span>
+                            <p class="mt-2 text-red-300">Extremely unpredictable. Do not engage. The Joker is considered one of the most dangerous individuals alive.</p>
+                        </div>
 
-                <blockquote class="border-l-4 border-red-600 pl-8 italic my-12 text-2xl">
-                    "All it takes is one bad day to turn the sanest man alive into a raving lunatic. That's how far I'm willing to go to prove my point."
-                </blockquote>
+                        <div>
+                            <span class="block text-red-400 text-sm">LAST SEEN</span>
+                            <p class="mt-2">Downtown Metropolis — July 19, 2026</p>
+                            <p class="text-sm text-gray-400 mt-4">Often seen wearing purple suit and green hair. May be carrying dangerous gadgets.</p>
+                        </div>
+                    </div>
+                </div>
 
-                <p>
-                    Batman and the Justice League have been alerted, but as of now, The Joker remains at large. 
-                    Citizens are urged to remain vigilant and report any suspicious activity immediately.
-                </p>
+                <div class="bg-zinc-900 p-8 border border-red-900/50">
+                    <h3 class="text-red-400 mb-4">RECENT ATTACK</h3>
+                    <p class="text-lg">The Joker unleashed laughing gas and explosives in the financial district, causing mass panic and several injuries.</p>
+                </div>
 
-                <p>
-                    This latest attack serves as a grim reminder that even in a city protected by heroes, the shadow of chaos is never far away.
-                </p>
             </div>
         </div>
     </div>
 
-    <footer class="bg-black py-12 text-center text-gray-500 text-sm">
-        © 2026 Daily Planet • Stay Safe • Report Suspicious Activity
+    <footer class="mt-auto bg-black py-12 text-center text-gray-500 text-sm">
+        METROPOLIS POLICE DEPARTMENT • DO NOT APPROACH • CALL AUTHORITIES
     </footer>
+
 </div>
 
 </body>
