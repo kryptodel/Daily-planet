@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planet - An Unlikely Alliance: Batman in Metropolis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=EB+Garamond:wght@400;600&display=swap');
+        
+        body {
+            font-family: 'EB Garamond', Georgia, serif;
+            background: #111827;
+            color: #e5e7eb;
+        }
+        .headline {
+            font-family: 'Playfair Display', serif;
+        }
+        .article-content {
+            font-size: 1.18rem;
+            line-height: 1.85;
+        }
+      @media (max-width: 768px) {
+
+    body{
+        background:#fffef7;
+    }
+
+    .newspaper{
+        width:100%;
+        border:none;
+    }
+
+
+    header{
+        padding:18px 15px;
+    }
+
+    header img{
+        width:48px;
+        height:48px;
+    }
+
+    header h1{
+        font-size:2rem !important;
+        line-height:1;
+        text-align:center;
+    }
+
+    header p{
+        text-align:center;
+    }
+
+
+    .border-b .flex{
+        justify-content:center;
+        gap:14px;
+        font-size:.72rem;
+    }
+
+
+    .carousel-slide img{
+        height:240px;
+    }
+
+    .carousel-slide .absolute.bottom-8{
+        left:18px;
+        right:18px;
+        bottom:18px;
+    }
+
+    .carousel-slide h2{
+        font-size:1.6rem !important;
+        line-height:1.15;
+    }
+
+    .carousel-slide p{
+        font-size:.9rem;
+    }
+
+    .carousel-slide a{
+        padding:10px 18px;
+        font-size:.85rem;
+    }
+
+    #prev-btn,
+    #next-btn{
+        padding:10px;
+    }
+
+
+    .px-6{
+        padding-left:18px !important;
+        padding-right:18px !important;
+    }
+
+    .headline{
+        font-size:2.2rem !important;
+        line-height:1.15;
+        text-align:center;
+    }
+
+    .prose{
+        font-size:1.08rem;
+    }
+
+    .prose h2{
+        font-size:1.8rem;
+        text-align:left;
+    }
+
+    .prose p{
+        text-align:justify;
+    }
+
+    .prose blockquote,
+    .prose .bg-gray-100{
+        padding:20px;
+        font-size:1.1rem;
+    }
+
+
+    .grid{
+        gap:22px;
+    }
+
+    .card-hover img{
+        height:210px;
+    }
+
+    .card-hover h3{
+        font-size:1.25rem;
+    }
+
+
+    footer{
+        padding:35px 20px;
+        text-align:center;
+    }
+      }
+    </style>
+</head>
+<body>
+
+<div class="bg-[#fffef7] min-h-screen flex flex-col">
+
+    <header class="bg-black text-white px-8 py-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-4">
+                    <img src="Logo.png" alt="Logo" class="w-14 h-14">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-black tracking-tighter headline">DAILY PLANET</h1>
+                        <p class="text-xs tracking-widest text-gray-400">METROPOLIS • EST. 1885</p>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <div class="text-sm">July 19, 2026</div>
+                    <div class="text-amber-400 text-lg font-medium tracking-wider">DIGITAL EDITION</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto w-full px-8 py-4 border-b">
+        <a href="hero.html" class="inline-flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
+            ← Back to Heroes
+        </a>
+    </div>
+
+    <article class="flex-1 max-w-5xl mx-auto w-full px-8 py-10">
+
+        <div class="flex items-center gap-4 text-sm text-gray-500 mb-6">
+            <span class="bg-red-100 text-red-700 px-5 py-1.5 rounded-full font-medium">CROSSOVER EVENT</span>
+            <span>July 19, 2026</span>
+        </div>
+
+        <h1 class="headline text-5xl md:text-6xl font-bold leading-tight mb-8">
+            An Unlikely Alliance: Batman Teams Up With Superman in Metropolis
+        </h1>
+
+        <div class="flex items-center gap-4 mb-12">
+            <img src="Lois.jpg" 
+                 alt="Lois Lane" 
+                 class="w-14 h-14 rounded-full object-cover border-2 border-white shadow-md">
+            <div>
+                <p class="font-semibold text-lg">By Lois Lane</p>
+                <p class="text-gray-500">Daily Planet Senior Reporter</p>
+            </div>
+        </div>
+
+        <div class="mb-12">
+            <img src="superbat2.jpg" 
+                 alt="Batman and Superman" 
+                 class="w-full rounded-2xl shadow-2xl aspect-video object-cover">
+            <p class="text-center text-sm text-gray-500 mt-4">
+                Batman and Superman standing side by side overlooking Metropolis
+            </p>
+        </div>
+
+        <div class="article-content prose prose-lg max-w-none text-justify text-gray-800">
+            <p>
+                In a scene rarely witnessed outside of major crises, the Dark Knight of Gotham was seen openly collaborating with the Man of Steel right here in Metropolis. 
+                Sources confirm that Batman has been operating in our city for the past 48 hours, working alongside Superman to neutralize a sophisticated threat involving advanced alien technology.
+            </p>
+            
+            <p>
+                For Batman — a hero known for his solitary nature and deep distrust of metahumans — this public alliance is highly unusual. 
+                Witnesses described the two working in perfect sync, with Batman’s tactical brilliance complementing Superman’s raw power.
+            </p>
+
+            <h2 class="text-3xl font-semibold mt-12 mb-6">Why Batman Came to Metropolis</h2>
+            
+            <p>
+                According to reliable sources, the threat originated from a LexCorp experiment gone wrong — or perhaps intentionally dangerous. 
+                Batman, who has been monitoring Lex Luthor’s activities for years, arrived with critical intelligence that helped Superman contain the situation before it escalated into a city-wide disaster.
+            </p>
+
+            <blockquote class="border-l-4 border-red-700 pl-8 italic my-12 text-2xl">
+                "I don’t trust easily. But when the stakes are this high, even I know when to set aside differences. The mission comes first."
+            </blockquote>
+
+            <p>
+                Superman later commented briefly to reporters: “Batman is one of the most dedicated individuals I’ve ever met. He doesn’t need superpowers to be extraordinary. Today, Metropolis owes him a debt of gratitude.”
+            </p>
+
+            <h2 class="text-3xl font-semibold mt-12 mb-6">A Tense Partnership</h2>
+            
+            <p>
+                Observers noted visible tension between the two heroes. Batman prefers to operate from the shadows, while Superman is a public symbol of hope. 
+                Yet their combined efforts successfully prevented what could have been one of the worst technological disasters in the city’s history.
+            </p>
+
+            <p>
+                As the sun set over Metropolis, the two were seen standing together on a rooftop, briefly discussing next steps before Batman vanished into the night — returning to the shadows he knows best.
+            </p>
+
+            <p class="mt-10 font-medium">
+                For now, the alliance appears to have been successful. But many are left wondering: will this unusual partnership between the Dark Knight and the Man of Steel become more common as new threats emerge?
+            </p>
+        </div>
+    </article>
+
+    <footer class="mt-auto bg-black text-gray-400 py-10 text-sm">
+        <div class="max-w-5xl mx-auto text-center px-8">
+            © 2026 Daily Planet • Metropolis • All Rights Reserved
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>
