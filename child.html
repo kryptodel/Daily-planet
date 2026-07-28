@@ -222,19 +222,30 @@
             ALLEGED RECORDING — WITNESS ACCOUNT
         </div>
         
-        <div class="aspect-video bg-black">
-            <video
+        <div class="my-12">
+    <div class="bg-zinc-900 border border-red-900 rounded-2xl overflow-hidden">
+        <div class="p-4 bg-red-900/30 text-center text-sm font-medium text-red-300">
+            ALLEGED RECORDING — WITNESS ACCOUNT
+        </div>
+        
+        <div class="w-full bg-black" style="aspect-ratio: 16/9;">
+            <video 
+                id="childVideo"
                 controls 
                 playsinline
-                preload="metadata"
-                class="w-full h-full object-cover"
-                style="max-height: 500px;">
+                preload="auto"
+                class="w-full h-full"
+                style="display: block;">
                 
-                <source src="./child.mp4" type="video/mp4">
-                <source src="child.webm" type="video/webm">
-                
-                Seu navegador não suporta a reprodução de vídeo.
+                <source src="child.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo HTML5.
             </video>
+        </div>
+        
+        <p class="text-center text-xs text-gray-500 py-3">
+            Alleged conversation between Child and Solomon Grundy (unverified)
+        </p>
+    </div>
         </div>
         
         <p class="text-center text-xs text-gray-500 py-3">
@@ -307,6 +318,15 @@
         © 2026 Daily Planet • Stay Safe • Report Suspicious Activity
     </footer>
 </div>
+    <script>
+    const video = document.getElementById('childVideo');
+    
+    video.addEventListener('error', function(e) {
+        console.error('Erro ao carregar o vídeo:', e);
+        alert('Erro ao carregar o vídeo. Verifique se o arquivo child.mp4 está na mesma pasta.');
+    });
+    video.load();
+    </script>
 
 </body>
 </html>
