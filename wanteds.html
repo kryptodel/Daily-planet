@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,6 +42,14 @@
         .search-input:focus {
             box-shadow: 0 0 0 4px rgba(185, 28, 28, 0.2);
         }
+        .category-btn {
+            transition: all 0.2s ease;
+        }
+        .category-btn.active {
+            background-color: #b91c1c !important;
+            color: white !important;
+            border-color: #b91c1c !important;
+        }
                 
 @media (max-width: 768px) {
 
@@ -53,7 +61,6 @@
         width:100%;
         border:none;
     }
-
 
     header{
         padding:18px 15px;
@@ -74,43 +81,11 @@
         text-align:center;
     }
 
-
     .border-b .flex{
         justify-content:center;
         gap:14px;
         font-size:.72rem;
     }
-
-
-    .carousel-slide img{
-        height:240px;
-    }
-
-    .carousel-slide .absolute.bottom-8{
-        left:18px;
-        right:18px;
-        bottom:18px;
-    }
-
-    .carousel-slide h2{
-        font-size:1.6rem !important;
-        line-height:1.15;
-    }
-
-    .carousel-slide p{
-        font-size:.9rem;
-    }
-
-    .carousel-slide a{
-        padding:10px 18px;
-        font-size:.85rem;
-    }
-
-    #prev-btn,
-    #next-btn{
-        padding:10px;
-    }
-
 
     .px-6{
         padding-left:18px !important;
@@ -123,38 +98,9 @@
         text-align:center;
     }
 
-    .prose{
-        font-size:1.08rem;
-    }
-
-    .prose h2{
-        font-size:1.8rem;
-        text-align:left;
-    }
-
-    .prose p{
-        text-align:justify;
-    }
-
-    .prose blockquote,
-    .prose .bg-gray-100{
-        padding:20px;
-        font-size:1.1rem;
-    }
-
-
     .grid{
         gap:22px;
     }
-
-    .card-hover img{
-        height:210px;
-    }
-
-    .card-hover h3{
-        font-size:1.25rem;
-    }
-
 
     footer{
         padding:35px 20px;
@@ -211,17 +157,38 @@
         </div>
     </div>
 
+    <div class="px-6 py-6 border-b border-gray-200 bg-white">
+        <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+            <button onclick="filterCategory('all')" class="category-btn active px-5 py-2 rounded-full text-sm font-medium border border-red-700 text-red-700" data-category="all">All</button>
+            <button onclick="filterCategory('wanted')" class="category-btn px-5 py-2 rounded-full text-sm font-medium border border-gray-300 hover:border-red-700 hover:text-red-700" data-category="wanted">Wanted</button>
+            <button onclick="filterCategory('captured')" class="category-btn px-5 py-2 rounded-full text-sm font-medium border border-gray-300 hover:border-red-700 hover:text-red-700" data-category="captured">Captured</button>
+        </div>
+    </div>
+
     <div class="main-content px-6 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="wanted-grid">
-            <a href="wanted1.html" class="wanted-card group block overflow-hidden wanted-item" data-name="deathstroke slade wilson">
+
+            <a href="wanted2.html" class="wanted-card group block overflow-hidden wanted-item" data-category="wanted" data-name="joker coringa">
+                <div class="relative">
+                    <img src="Joker.jpg" class="w-full h-80 object-cover">
+                    <div class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-5 py-1">EXTREMELY DANGEROUS</div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-3xl font-bold text-gray-900">THE JOKER</h3>
+                    <p class="text-red-700 font-semibold mt-1">A.K.A. CORINGA</p>
+                    <p class="mt-5 text-gray-600">Wanted for terrorism, mass murder, chemical attacks, and countless acts of chaos across Metropolis and Gotham.</p>
+                </div>
+            </a>
+
+            <a href="wanted1.html" class="wanted-card group block overflow-hidden wanted-item" data-category="captured" data-name="deathstroke slade wilson">
                 <div class="relative">
                     <img src="Slade.jpg" class="w-full h-80 object-cover">
-                    <div class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-5 py-1">EXTREMELY DANGEROUS</div>
+                    <div class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-5 py-1">CAPTURED</div>
                 </div>
                 <div class="p-8">
                     <h3 class="text-3xl font-bold text-gray-900">SLADE WILSON</h3>
                     <p class="text-red-700 font-semibold mt-1">A.K.A. DEATHSTROKE</p>
-                    <p class="mt-5 text-gray-600">Wanted for assassination, terrorism, mercenary activities, and multiple counts of murder.</p>
+                    <p class="mt-5 text-gray-600">Captured by Nightwing after a high-intensity operation. Previously wanted for assassination, terrorism, mercenary activities, and multiple counts of murder.</p>
                 </div>
             </a>
 
@@ -239,15 +206,47 @@
 <script>
     const searchInput = document.getElementById('searchInput');
 
-    searchInput.addEventListener('input', () => {
-        const term = searchInput.value.toLowerCase().trim();
-        const items = document.querySelectorAll('.wanted-item');
+    function filterCards() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const cards = document.querySelectorAll('.wanted-item');
+        const activeBtn = document.querySelector('.category-btn.active');
+        const selectedCategory = activeBtn ? activeBtn.getAttribute('data-category') : 'all';
 
-        items.forEach(item => {
-            const name = item.getAttribute('data-name').toLowerCase();
-            item.style.display = name.includes(term) ? 'block' : 'none';
+        cards.forEach(card => {
+            const matchesCategory = (selectedCategory === 'all') || 
+                                  (card.getAttribute('data-category') === selectedCategory);
+            
+            const name = card.getAttribute('data-name').toLowerCase();
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const description = card.querySelector('p:last-of-type').textContent.toLowerCase();
+            
+            const matchesSearch = searchTerm === '' || 
+                                name.includes(searchTerm) || 
+                                title.includes(searchTerm) || 
+                                description.includes(searchTerm);
+
+            card.style.display = (matchesCategory && matchesSearch) ? 'block' : 'none';
         });
-    });
+    }
+
+    searchInput.addEventListener('input', filterCards);
+
+    function filterCategory(selectedCategory) {
+        const buttons = document.querySelectorAll('.category-btn');
+
+        buttons.forEach(button => button.classList.remove('active'));
+        
+        const activeButton = Array.from(buttons).find(btn => 
+            btn.getAttribute('data-category') === selectedCategory
+        );
+        if (activeButton) activeButton.classList.add('active');
+
+        filterCards();
+    }
+
+    window.onload = () => {
+        filterCategory('all');
+    };
 </script>
 
 </body>
