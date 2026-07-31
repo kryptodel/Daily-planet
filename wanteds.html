@@ -156,11 +156,10 @@
             </div>
         </div>
     </div>
-
+    
     <div class="px-6 py-6 border-b border-gray-200 bg-white">
         <div class="flex flex-wrap gap-3 justify-center md:justify-start">
-            <button onclick="filterCategory('all')" class="category-btn active px-5 py-2 rounded-full text-sm font-medium border border-red-700 text-red-700" data-category="all">All</button>
-            <button onclick="filterCategory('wanted')" class="category-btn px-5 py-2 rounded-full text-sm font-medium border border-gray-300 hover:border-red-700 hover:text-red-700" data-category="wanted">Wanted</button>
+            <button onclick="filterCategory('wanted')" class="category-btn active px-5 py-2 rounded-full text-sm font-medium border border-red-700 text-red-700" data-category="wanted">Wanted</button>
             <button onclick="filterCategory('captured')" class="category-btn px-5 py-2 rounded-full text-sm font-medium border border-gray-300 hover:border-red-700 hover:text-red-700" data-category="captured">Captured</button>
         </div>
     </div>
@@ -210,11 +209,10 @@
         const searchTerm = searchInput.value.toLowerCase().trim();
         const cards = document.querySelectorAll('.wanted-item');
         const activeBtn = document.querySelector('.category-btn.active');
-        const selectedCategory = activeBtn ? activeBtn.getAttribute('data-category') : 'all';
+        const selectedCategory = activeBtn ? activeBtn.getAttribute('data-category') : 'wanted';
 
         cards.forEach(card => {
-            const matchesCategory = (selectedCategory === 'all') || 
-                                  (card.getAttribute('data-category') === selectedCategory);
+            const matchesCategory = card.getAttribute('data-category') === selectedCategory;
             
             const name = card.getAttribute('data-name').toLowerCase();
             const title = card.querySelector('h3').textContent.toLowerCase();
@@ -245,7 +243,7 @@
     }
 
     window.onload = () => {
-        filterCategory('all');
+        filterCategory('wanted'); 
     };
 </script>
 
